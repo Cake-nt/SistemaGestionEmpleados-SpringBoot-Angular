@@ -1,0 +1,37 @@
+# ========================================
+# BACKEND - SPRING BOOT
+# ========================================
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/HELP.md
+backend/.gitattributes
+
+# ========================================
+# FRONTEND - ANGULAR
+# ========================================
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.env
+frontend/.vscode/
+frontend/out/
+frontend/npm-debug.log
+frontend/yarn-error.log
+frontend/package-lock.json
+
+# ========================================
+# IDE
+# ========================================
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# ========================================
+# SISTEMA OPERATIVO
+# ========================================
+.DS_Store
+Thumbs.db
+desktop.ini
