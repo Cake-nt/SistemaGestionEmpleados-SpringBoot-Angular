@@ -1,0 +1,10 @@
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\config\CorsConfig.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\controller\EmpleadoController.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\dto\EmpleadoDTO.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\EmpleadosApplication.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\exception\GlobalExceptionHandler.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\exception\ResourceNotFoundException.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\model\Empleado.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\repository\EmpleadoRepository.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\service\EmpleadoService.java
+C:\Users\LixElectronics\TechStore\sistema-empleados\backend\src\main\java\com\toledo\empleados\service\impl\EmpleadoServiceImpl.java
