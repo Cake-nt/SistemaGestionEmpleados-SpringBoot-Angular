@@ -1,0 +1,57 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>👥 Lista de Empleados</h2>
+    <button (click)="crearEmpleado()" class="btn btn-success">
+      ➕ Nuevo Empleado
+    </button>
+  </div>
+
+  <!-- Formulario -->
+  <app-empleado-form 
+    *ngIf="mostrarFormulario"
+    [empleado]="empleadoSeleccionado"
+    (guardar)="guardarEmpleado($event)"
+    (cancelar)="cerrarFormulario()">
+  </app-empleado-form>
+
+  <!-- Tabla -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Fecha Contratación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{ empleado.id }}</td>
+          <td>{{ empleado.nombre }}</td>
+          <td>{{ empleado.apellido }}</td>
+          <td>{{ empleado.email }}</td>
+          <td>{{ empleado.fechaContratacion | date:'dd/MM/yyyy' }}</td>
+          <td>
+            <button (click)="editarEmpleado(empleado)" class="btn btn-primary btn-sm me-2">
+              ✏️ Editar
+            </button>
+            <button (click)="eliminarEmpleado(empleado.id!)" class="btn btn-danger btn-sm">
+              🗑️ Eliminar
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="empleados.length === 0">
+          <td colspan="6" class="text-center py-4">
+            <p>📭 No hay empleados registrados</p>
+            <button (click)="crearEmpleado()" class="btn btn-success btn-sm">
+              ➕ Crear el primer empleado
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

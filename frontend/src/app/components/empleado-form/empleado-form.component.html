@@ -1,0 +1,51 @@
+<div class="card mb-4">
+  <div class="card-header">
+    <h5>{{ esEdicion ? '✏️ Editar Empleado' : '➕ Nuevo Empleado' }}</h5>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="empleadoForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" formControlName="nombre">
+          <div *ngIf="empleadoForm.get('nombre')?.invalid && empleadoForm.get('nombre')?.touched" class="text-danger">
+            El nombre es obligatorio
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" formControlName="apellido">
+          <div *ngIf="empleadoForm.get('apellido')?.invalid && empleadoForm.get('apellido')?.touched" class="text-danger">
+            El apellido es obligatorio
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+          <div *ngIf="empleadoForm.get('email')?.invalid && empleadoForm.get('email')?.touched" class="text-danger">
+            Ingresa un email válido
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="fechaContratacion" class="form-label">Fecha de Contratación</label>
+          <input type="date" class="form-control" id="fechaContratacion" formControlName="fechaContratacion">
+          <div *ngIf="empleadoForm.get('fechaContratacion')?.invalid && empleadoForm.get('fechaContratacion')?.touched" class="text-danger">
+            La fecha es obligatoria
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-success" [disabled]="empleadoForm.invalid">
+          {{ esEdicion ? 'Actualizar' : 'Guardar' }}
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
